@@ -1,19 +1,19 @@
 import React from "react";
-
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <>
       <div className="flex justify-between mt-[20px] items-center mb-[20px]">
         <div className="text-2xl font-bold">
-          <a href="#">WordHaven</a>
+          <Link to="/">WordHaven</Link>
         </div>
         <div className="flex gap-[20px] text-base">
-          <a href="#" title="Login">
+          <Link to="/login" title="Login">
             Login
-          </a>
-          <a href="#" title="Register">
+          </Link>
+          <Link to="/register" title="Register">
             Register
-          </a>
+          </Link>
         </div>
       </div>
     </>

@@ -3,3 +3,22 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+body {
+  margin: 0;
+}
+input:focus {
+  outline: none;
+}
+
+/* #registration {
+  border: 1px solid black;
+  outline: 1px solid black;
+  outline-offset: -1px;
+  transition: outline-offset 250ms ease, border-radius 250ms ease;
+  border-radius: 4px;
+}
+#registration:hover {
+  outline-offset: -5px;
+  border-radius: 8px;
+} */
