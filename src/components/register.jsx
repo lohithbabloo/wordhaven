@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -8,12 +10,20 @@ const Register = () => {
 
   async function Registration(e) {
     e.preventDefault();
-    const res = await fetch("http://localhost:4000/register", {
-      method: "POST",
-      body: JSON.stringify({ name, email, password }),
-      headers: { "Content-Type": "application/json" },
-    });
-    console.log(res);
+    if (password === confirmpassword) {
+      const res = await fetch("http://localhost:4000/register", {
+        method: "POST",
+        body: JSON.stringify({ name, email, password }),
+        headers: { "Content-Type": "application/json" },
+      });
+      if (res.status === 200) {
+        toast.success("Success");
+      } else {
+        toast.error("Something went wrong, Please try again later");
+      }
+    } else {
+      alert("Please recheck your password");
+    }
   }
 
   return (
@@ -66,10 +76,7 @@ const Register = () => {
                 className="w-full px-3 py-2 border-b-2"
               />
             </div>
-            <div className="items-left flex justify-start text-left w-full">
-              <input type="checkbox" required />
-              <label>Accept all the terms and conditions</label>
-            </div>
+
             <div className="">
               <button
                 onClick={Registration}
@@ -89,13 +96,14 @@ const Register = () => {
             </button>
           </div>
           <div className="w-full">
-            <button className="flex items-center justify-center w-full border border-black rounded px-10 py-2 hover:bg-stone-400 transistion duration-200 ">
+            <button className="flex items-center justify-center w-full border border-black rounded px-8 py-2 hover:bg-stone-400 transistion duration-200 ">
               <p>Continue with FACEBOOK</p>
               <img src="/public/image4.png" height={40} width={40}></img>
             </button>
           </div>
         </div>
       </div>
+      <ToastContainer position="bottom-right" newestOnTop />
     </>
   );
 };

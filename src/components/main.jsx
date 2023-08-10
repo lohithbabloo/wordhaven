@@ -4,34 +4,47 @@ const Main = () => {
   return (
     <>
       <div className="flex flex-col gap-[20px]">
-        <div className="flex justify-center gap-[20px] border-b-2 pb-[10px]">
-          <div className="aspect-square h-[200px] ">
-            <a href="#" className="">
+        <div className="mx-auto bg-white rounded-xl shadow-md w-full max-w-lg md:max-w-5xl overflow-hidden">
+          <div className="md:flex">
+            <div className="md:shrink-0">
               <img
                 src="/public/image1.jpg"
-                alt="requested img"
-                className="h-full w-full object-cover "
-              />
-            </a>
-          </div>
-          <div className="flex flex-col gap-[10px]">
-            <a href="#">
-              <p className="font-bold text-lg mt-0 hover:underline">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Placeat, repudiandae dolore minima maxime error nemo dignissimos
-                illum veritatis dolores.
-              </p>
-            </a>
-            <p className="mt-0">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse
-              earum ad voluptates tempore neque voluptas
-            </p>
-            <p className="mt-0">
-              Created by{" "}
-              <span className="text-base font-semibold">Username</span>
-            </p>
-            <p className="mt-0">Date: xx/xx/xxxx</p>
-            <p className="mt-0">Time: xx:xx</p>
+                alt="uploaded image"
+                className="h-48 w-full object-cover md:h-full md:w-48 aspect-square"
+              ></img>
+            </div>
+            <div className="p-4 flex flex-col gap-2 overflow-hidden">
+              <div className="">
+                <a
+                  href="#"
+                  className="mb-[20px] font-semibold text-xl hover:underline"
+                >
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Dicta aliquam, nihil ab, temporibus cumque facere deserunt
+                    error molestias libero at natus perferendis sed quidem quasi
+                    ex debitis aliquid? Quas, labore!
+                  </p>
+                </a>
+              </div>
+              <div className="overflow-hidden">
+                <p className="text-stone-400 whitespace-nowrap text-ellipsis truncate">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse
+                  facilis ea molestiae, magnam inventore modi ipsum dolorum
+                  aperiam nostrum doloribus deleniti quis, soluta ducimus
+                  repellat non minus est tempore velit?Lorem ipsum dolor sit
+                  amet consectetur adipisicing elit. Vero officiis quasi sed
+                  dignissimos ut qui voluptate ea, a quas cum maiores inventore
+                  praesentium eos aperiam ipsam. Iure molestias aspernatur
+                  officiis.
+                </p>
+              </div>
+              <div>
+                <p className="text-stone-400">
+                  Created By <span className="text-zinc-700">USER</span>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

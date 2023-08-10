@@ -9,9 +9,10 @@ function App() {
   return (
     <Routes>
       <Route
+        path="/"
         index
         element={
-          <div className="max-w-[1000px] w-[90%] m-auto">
+          <div className="max-w-5xl w-[90%] m-auto">
             <Navbar />
             <Main />
           </div>
@@ -20,7 +21,7 @@ function App() {
       <Route
         path={"/login"}
         element={
-          <div className="max-w-[500px] w-[90%] m-auto flex items-center justify-center h-screen ">
+          <div className="max-w-5xl w-[90%] m-auto flex items-center justify-center h-screen ">
             <Login />
           </div>
         }
